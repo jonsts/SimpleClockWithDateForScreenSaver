@@ -117,5 +117,12 @@
         // setInterval(toggleWeatherPosition, 5 * 60 * 1000); // Toggle margin every 5 minutes
         updateTime(); // Initial call to display immediately
     </script>
+    <script>
+        setTimeout(() => {
+document.querySelectorAll('.wlr__fcTempDay, .wlr__fcTempNight, .wlr__temp').forEach(tempElement => {
+  tempElement.textContent = tempElement.textContent.replace('+', '');
+});
+}, 500); // Wait for 1 second (1000ms)
+    </script>
 </body>
 </html>
