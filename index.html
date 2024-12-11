@@ -117,5 +117,15 @@
         // setInterval(toggleWeatherPosition, 5 * 60 * 1000); // Toggle margin every 5 minutes
         updateTime(); // Initial call to display immediately
     </script>
+    <script>
+        // Select the temperature element
+const tempElement = document.querySelector('.wlr_temp');
+
+// Check if the element exists and contains a "+" sign
+if (tempElement && tempElement.textContent.includes('+')) {
+  // Remove the "+" sign and update the text content
+  tempElement.textContent = tempElement.textContent.replace('+', '');
+}
+    </script>
 </body>
 </html>
