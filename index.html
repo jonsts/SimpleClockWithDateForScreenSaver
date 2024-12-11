@@ -118,14 +118,10 @@
         updateTime(); // Initial call to display immediately
     </script>
     <script>
-        // Select the temperature element
-const tempElement = document.querySelector('.wlr_temp');
-
-// Check if the element exists and contains a "+" sign
-if (tempElement && tempElement.textContent.includes('+')) {
-  // Remove the "+" sign and update the text content
+document.querySelectorAll('.wlr__fcTempDay, .wlr__fcTempNight, .wlr__temp').forEach(tempElement => {
   tempElement.textContent = tempElement.textContent.replace('+', '');
-}
+});
+
     </script>
 </body>
 </html>
